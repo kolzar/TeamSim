@@ -29,7 +29,7 @@ app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode();
 
 // Configura localizzazione
-var supportedCultures = new[] { "en", "it", "fr", "es" };
+var supportedCultures = new[] { "en", "it" };
 var localizationOptions = new RequestLocalizationOptions()
     .SetDefaultCulture("it")
     .AddSupportedCultures(supportedCultures)
