@@ -54,6 +54,6 @@
         public string version { get; set; }
         public string export { get; set; }
         public string latestRoster { get; set; }
-        public List<Player> players { get; set; }   
+        public List<Player> Players { get; set; }   
     }
 }

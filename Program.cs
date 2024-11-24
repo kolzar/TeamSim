@@ -3,8 +3,12 @@ using TeamSim.Components;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddRazorComponents()
+builder.Services
+    .AddRazorComponents()
     .AddInteractiveServerComponents();
+
+builder.Services
+    .AddLocalization(options => options.ResourcesPath = "Resources");
 
 var app = builder.Build();
 
@@ -23,5 +27,14 @@ app.UseAntiforgery();
 
 app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode();
+
+// Configura localizzazione
+var supportedCultures = new[] { "en", "it", "fr", "es" };
+var localizationOptions = new RequestLocalizationOptions()
+    .SetDefaultCulture("it")
+    .AddSupportedCultures(supportedCultures)
+    .AddSupportedUICultures(supportedCultures);
+
+app.UseRequestLocalization(localizationOptions);
 
 app.Run();

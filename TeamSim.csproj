@@ -7,7 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Components\Pages\Index.razor~RF30609232.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Sports\Soccer\Controllers\" />
+    <Folder Include="Sports\Soccer\Enumerations\" />
   </ItemGroup>
 
 </Project>

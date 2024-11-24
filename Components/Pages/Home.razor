@@ -1,7 +1,91 @@
 ﻿@page "/"
+@using System.IO
+@using System.Threading.Tasks
 
-<PageTitle>Home</PageTitle>
+<h1 class="text-center mt-5">Benvenuto alla Simulazione di Calcio</h1>
 
-<h1>Hello, world!</h1>
+<p class="text-center mt-3">Gestisci la tua squadra, vinci trofei e scrivi la storia del calcio!</p>
 
-Welcome to your new app.
+<div class="text-center mt-4">
+    <button class="btn btn-primary m-2" @onclick="StartNewGame">Inizia Nuova Partita</button>
+    <button class="btn btn-secondary m-2" @onclick="LoadSavedGame">Carica Partita Salvata</button>
+    <button class="btn btn-warning m-2" @onclick="OpenSettings">Impostazioni</button>
+</div>
+
+@if (ErrorMessage != null)
+{
+    <div class="alert alert-danger text-center mt-3">@ErrorMessage</div>
+}
+
+<!-- Modale per la conferma di avvio di una nuova partita -->
+@if (ShowNewGameModal)
+{
+    <div class="modal show d-block" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Nuova Partita</h5>
+                    <button type="button" class="btn-close" @onclick="CloseModal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Sei sicuro di voler iniziare una nuova partita? Eventuali progressi non salvati andranno persi.</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-danger" @onclick="ConfirmNewGame">Sì, inizia</button>
+                    <button class="btn btn-secondary" @onclick="CloseModal">Annulla</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@code {
+    private bool ShowNewGameModal = false;
+    private string? ErrorMessage = null;
+
+    private void StartNewGame()
+    {
+        ShowNewGameModal = true;
+    }
+
+    private void ConfirmNewGame()
+    {
+        // Logica per iniziare una nuova partita
+        ShowNewGameModal = false;
+
+        // Simulazione: Naviga alla pagina principale del gioco
+        // NavigationManager.NavigateTo("/game");
+    }
+
+    private void LoadSavedGame()
+    {
+        try
+        {
+            // Logica per caricare una partita salvata
+            if (File.Exists("savedGame.json"))
+            {
+                // NavigationManager.NavigateTo("/game");
+            }
+            else
+            {
+                ErrorMessage = "Nessuna partita salvata trovata.";
+            }
+        }
+        catch (Exception ex)
+        {
+            ErrorMessage = $"Errore durante il caricamento della partita salvata: {ex.Message}";
+        }
+    }
+
+    private void OpenSettings()
+    {
+        // Naviga alla pagina delle impostazioni
+        // NavigationManager.NavigateTo("/settings");
+    }
+
+    private void CloseModal()
+    {
+        ShowNewGameModal = false;
+    }
+}
+

@@ -1,4 +1,4 @@
-﻿namespace TeamSim.Sports.Soccer.Models.Player.Features
+﻿namespace TeamSim.Sports.Soccer.Models.Features
 {
     public class Mental
     {

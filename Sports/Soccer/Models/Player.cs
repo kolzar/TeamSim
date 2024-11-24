@@ -1,4 +1,4 @@
-﻿namespace TeamSim.Sports.Soccer.Models.Player
+﻿namespace TeamSim.Sports.Soccer.Models
 {
     public class Player
     {

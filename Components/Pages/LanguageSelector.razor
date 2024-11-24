@@ -1,0 +1,16 @@
+﻿@inject NavigationManager NavigationManager
+
+<select @onchange="ChangeLanguage" class="form-select">
+    <option value="en">English</option>
+    <option value="it">Italiano</option>
+    <option value="fr">Français</option>
+    <option value="es">Español</option>
+</select>
+
+@code {
+    private void ChangeLanguage(ChangeEventArgs e)
+    {
+        var culture = e.Value.ToString();
+        NavigationManager.NavigateTo($"?culture={culture}&ui-culture={culture}", forceLoad: true);
+    }
+}
