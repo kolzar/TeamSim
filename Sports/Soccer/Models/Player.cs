@@ -1,4 +1,6 @@
-﻿namespace TeamSim.Sports.Soccer.Models
+﻿using TeamSim.Sports.Soccer.Models.Features;
+
+namespace TeamSim.Sports.Soccer.Models
 {
     public class Player
     {
@@ -30,6 +32,10 @@
         public int PreferredFoot { get; set; }
         public int KitNumber { get; set; }
         public int WorkRate { get; set; }
+        public Goalkeeping Goalkeeping { get; set; }
+        public Mental Mental { get; set; }
+        public Physical Physical { get; set; }  
+        public Technical Technical { get; set; }
 
     }
 

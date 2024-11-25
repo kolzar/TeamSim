@@ -2,20 +2,16 @@
 
 @using System.IO
 @using System.Threading.Tasks
-@using Microsoft.Extensions.Localization
-
-@inject IStringLocalizer<Home> Localizer
 
 @inject NavigationManager NavigationManager
 
-<h1 class="text-center">@Localizer["WelcomeMessage"]</h1>
+<h1 class="text-center">Benvenuto </h1>
 
 <div class="text-center mt-4">
-    <button class="btn btn-primary m-2" @onclick="StartNewGame">@Localizer["StartNewGame"]</button>
-    <button class="btn btn-secondary m-2" @onclick="LoadSavedGame">@Localizer["LoadGame"]</button>
-    <button class="btn btn-warning m-2" @onclick="OpenSettings">@Localizer["Settings"]</button>
+    <button class="btn btn-primary m-2" @onclick="@(StartNewGame)">Inizia gioco</button>
+    <button class="btn btn-secondary m-2" @onclick="LoadSavedGame">Carica gioco</button>
+    <button class="btn btn-warning m-2" @onclick="OpenSettings">Impostazioni</button>
 </div>
-
 
 @if (ErrorMessage != null)
 {

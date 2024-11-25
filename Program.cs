@@ -2,13 +2,19 @@ using TeamSim.Components;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Configura il logging
+builder.Logging.ClearProviders(); // Rimuove i provider predefiniti
+builder.Logging.AddConsole();    // Aggiunge il logging alla console
+builder.Logging.SetMinimumLevel(LogLevel.Debug); // Imposta il livello minimo di log
+builder.Logging.AddFile("Logs/log.txt");
+
 // Add services to the container.
 builder.Services
     .AddRazorComponents()
     .AddInteractiveServerComponents();
 
 builder.Services
-    .AddLocalization(options => options.ResourcesPath = "Resources");
+    .AddLocalization(options => options.ResourcesPath = "Locales");
 
 var app = builder.Build();
 
@@ -25,16 +31,18 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseAntiforgery();
 
-app.MapRazorComponents<App>()
-    .AddInteractiveServerRenderMode();
+
 
 // Configura localizzazione
-var supportedCultures = new[] { "en", "it" };
+var supportedCultures = new[] { "it" };
 var localizationOptions = new RequestLocalizationOptions()
     .SetDefaultCulture("it")
     .AddSupportedCultures(supportedCultures)
     .AddSupportedUICultures(supportedCultures);
 
 app.UseRequestLocalization(localizationOptions);
+
+app.MapRazorComponents<App>()
+    .AddInteractiveServerRenderMode();
 
 app.Run();

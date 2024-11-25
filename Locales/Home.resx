@@ -119,15 +119,21 @@
   </resheader>
   <data name="LoadGame" xml:space="preserve">
     <value>Load Game</value>
+    <comment>Load Game</comment>
   </data>
   <data name="Settings" xml:space="preserve">
     <value>Settings</value>
+    <comment>Settings</comment>
   </data>
   <data name="StartNewGame" xml:space="preserve">
     <value>StartNewGame</value>
+    <comment>Start New Game</comment>
   </data>
   <data name="WelcomeMessage" xml:space="preserve">
     <value>Welcome to Championship Manager</value>
     <comment>Welcome to Championship Manager</comment>
+  </data>
+  <data name="Test" xml:space="preserve">
+    <value>asdsa</value>
   </data>
 </root>
