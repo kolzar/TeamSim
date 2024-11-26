@@ -10,7 +10,6 @@
     <Folder Include="Sports\Soccer\Controllers\" />
     <Folder Include="Sports\Soccer\Enumerations\" />
     <Folder Include="Sports\Soccer\Generators\" />
-    <Folder Include="Sports\Soccer\Utility\" />
   </ItemGroup>
 
   <ItemGroup>
