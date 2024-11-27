@@ -1,6 +1,6 @@
 ﻿namespace TeamSim.Sports.Soccer.Models
 {
-    public class Team
+    public class Club
     {
         public string id { get; set; }
         public string name { get; set; }
