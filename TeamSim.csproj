@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <Folder Include="Sports\Soccer\Controllers\" />
-    <Folder Include="Sports\Soccer\Enumerations\" />
     <Folder Include="Sports\Soccer\Generators\" />
   </ItemGroup>
 
