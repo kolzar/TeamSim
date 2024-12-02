@@ -11,6 +11,6 @@ namespace TeamSim.Sports.Soccer.Models
         public Prefs Prefs { get; set; }
         public Positions Positions { get; set; }        
         public Player Player { get; set; }
-        public History History { get; set; }
+        public List<History> History { get; set; }
     }
 }

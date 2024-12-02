@@ -12,5 +12,7 @@
         public Nation SecondNation { get; set; }
         public int IntApps { get; set; }
         public int IntGoals { get; set; }
+        public int Height { get; set; }
+        public int Weight { get; set; }
     }
 }
