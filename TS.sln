@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeamSim.Soccer.Core", "Team
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeamSim.Soccer.UI", "TeamSim.Soccer.UI\TeamSim.Soccer.UI.csproj", "{94224679-41FF-4D62-85DF-2C4E1850DC20}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeamSim.Soccer.Tests", "TeamSim.Soccer.Tests\TeamSim.Soccer.Tests.csproj", "{E4AEAF8C-A3DD-48E4-B07B-448BCE9C2932}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{94224679-41FF-4D62-85DF-2C4E1850DC20}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{94224679-41FF-4D62-85DF-2C4E1850DC20}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{94224679-41FF-4D62-85DF-2C4E1850DC20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4AEAF8C-A3DD-48E4-B07B-448BCE9C2932}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4AEAF8C-A3DD-48E4-B07B-448BCE9C2932}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4AEAF8C-A3DD-48E4-B07B-448BCE9C2932}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4AEAF8C-A3DD-48E4-B07B-448BCE9C2932}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
