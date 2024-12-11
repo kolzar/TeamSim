@@ -1,3 +1,4 @@
+using TeamSim.Soccer.Core.Services.Generators;
 using TeamSim.Soccer.UI.Components;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -7,6 +8,12 @@ builder.Logging.ClearProviders(); // Rimuove i provider predefiniti
 builder.Logging.AddConsole();    // Aggiunge il logging alla console
 builder.Logging.SetMinimumLevel(LogLevel.Debug); // Imposta il livello minimo di log
 builder.Logging.AddFile("Logs/log.txt");
+
+// Percorso del file JSON
+string jsonFilePath = "Data/nations.json";
+
+// Registra l'interfaccia e l'implementazione
+builder.Services.AddSingleton(new CountryService(jsonFilePath));
 
 // Add services to the container.
 builder.Services.AddRazorComponents()

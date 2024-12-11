@@ -8,7 +8,7 @@
         public string NameContinentality { get; set; }
         public string FederationName { get; set; }
         public string FederationShortName { get; set; }
-        public string RegionalStrength { get; set; }
+        public int RegionalStrength { get; set; }
 
     }
 }

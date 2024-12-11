@@ -6,7 +6,7 @@ namespace TeamSim.Sports.Soccer.Models
     {
         public string Id { get; set; }  
         public Personal Personal { get; set; }
-        public Contract Contract { get; set; }  
+        public ContractStaff ContractStaff { get; set; }  
         public MentalTraits MentalTraits { get; set; }
         public Prefs Prefs { get; set; }
         public Positions Positions { get; set; }        

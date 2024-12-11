@@ -1,0 +1,53 @@
+﻿@page "/countries"
+@inject CountryService CountryService
+
+<h3>Countries</h3>
+
+@if (countries == null)
+{
+    <p>Loading...</p>
+}
+else if (countries.Count == 0)
+{
+    <p>No countries found.</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Flag</th>
+                <th>Common Name</th>
+                <th>Official Name</th>
+                <th>Region</th>
+                <th>Population</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var country in countries)
+            {
+                <tr>
+                    <td>
+                        <img src="@country.Flags.Svg" alt="@country.Name.Common flag" width="50" height="30" />
+                    </td>
+                    <td>@country.Name.Common</td>
+                    <td>@country.Name.Official</td>
+                    <td>@country.Region</td>
+                    <td>@country.Population</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private List<Country> countries;
+
+    protected override void OnInitialized()
+    {
+        // Carica i dati delle nazioni
+        countries = CountryService.GetAllCountries()
+                                  .OrderByDescending(c => c.Population) // Ordine crescente
+                                  .ToList(); ;
+    }
+}

@@ -10,4 +10,9 @@
     <PackageReference Include="Serilog.Extensions.Logging.File" Version="3.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\TeamSim.Soccer.Contract\TeamSim.Soccer.Contract.csproj" />
+    <ProjectReference Include="..\TeamSim.Soccer.Core\TeamSim.Soccer.Core.csproj" />
+  </ItemGroup>
+
 </Project>
