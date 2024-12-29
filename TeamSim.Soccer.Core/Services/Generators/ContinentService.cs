@@ -13,8 +13,7 @@ namespace TeamSim.Soccer.Core.Services.Generators
             var names = new[] { "Europe", "Asia", "Africa", "North America", "South America", "Oceania" };
             var threeLetterNames = new[] { "EUR", "ASI", "AFR", "NAM", "SAM", "OCE" };
             var federations = new[] { "UEFA", "AFC", "CAF", "CONCACAF", "CONMEBOL", "OFC" };
-            var regionalStrengths = new[] { 20, 10, 17, 10, 20, 10
-             };
+            var regionalStrengths = new[] { 20, 10, 17, 10, 20, 10 };
 
             for (int i = 0; i < count; i++)
             {
